@@ -140,7 +140,7 @@ PrivateKey = OBlh/2Bm2vZPnXia2m3Yap8CK34+ojHRkkcqk3QAjnw=
 Address = 10.77.0.1/24 
 PostUp   = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -A FORWARD -o wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o $eth -j MASQUERADE
 PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -D FORWARD -o wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o $eth -j MASQUERADE
-ListenPort = 12479
+ListenPort = 6666
 DNS = 8.8.8.8
 MTU = 1420
 [Peer]
@@ -156,7 +156,7 @@ DNS = 8.8.8.8
 MTU = 1420
 [Peer]
 PublicKey = Dvgav/xxemKv2uiTEAJid13NGaKplTI7RYJBgn+Dfgo=
-Endpoint = $serverip:12479
+Endpoint = $serverip:6666
 AllowedIPs = 0.0.0.0/0, ::0/0
 PersistentKeepalive = 25
 EOF
